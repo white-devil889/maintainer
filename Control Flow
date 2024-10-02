@@ -1,0 +1,101 @@
+In C++, "flow" refers to the control flow of a program, which is the order in which individual statements, instructions, or function calls are executed or evaluated. Control flow is determined by control structures like loops, conditionals, and branching mechanisms.
+
+### 1. **Sequential Flow**
+   - By default, C++ programs execute instructions in the order in which they appear, line by line. This is called sequential flow.
+   ```cpp
+   int a = 10;
+   int b = 20;
+   int sum = a + b; // executes after the above two lines
+   ```
+
+### 2. **Conditional Flow (Decision Making)**
+   - Conditional flow allows a program to make decisions based on certain conditions. The most common conditional statements in C++ are `if`, `else`, and `else if`.
+
+   #### Example:
+   ```cpp
+   int x = 10;
+   if (x > 5) {
+       cout << "x is greater than 5";
+   } else {
+       cout << "x is less than or equal to 5";
+   }
+   ```
+   - **Switch Statement**: Another way of controlling the flow based on multiple conditions.
+   ```cpp
+   int day = 2;
+   switch (day) {
+       case 1:
+           cout << "Monday";
+           break;
+       case 2:
+           cout << "Tuesday";
+           break;
+       default:
+           cout << "Invalid day";
+   }
+   ```
+
+### 3. **Looping (Repetitive Flow)**
+   - Loops repeat a block of code as long as a specified condition is true. The main types of loops in C++ are:
+     - **`for` loop**
+     - **`while` loop**
+     - **`do-while` loop**
+
+   #### Example of a `for` loop:
+   ```cpp
+   for (int i = 0; i < 5; i++) {
+       cout << i << endl;
+   }
+   ```
+   #### Example of a `while` loop:
+   ```cpp
+   int i = 0;
+   while (i < 5) {
+       cout << i << endl;
+       i++;
+   }
+   ```
+
+   #### Example of a `do-while` loop:
+   ```cpp
+   int i = 0;
+   do {
+       cout << i << endl;
+       i++;
+   } while (i < 5);
+   ```
+
+### 4. **Jump Statements (Branching Flow)**
+   - Jump statements allow control to be transferred from one part of the program to another.
+     - **`break`**: Exits from a loop or switch statement.
+     - **`continue`**: Skips the current iteration of a loop and proceeds to the next one.
+     - **`return`**: Exits a function and optionally returns a value.
+     - **`goto`**: Jumps to a labeled statement (used sparingly in modern programming).
+
+   #### Example of `break` and `continue`:
+   ```cpp
+   for (int i = 0; i < 10; i++) {
+       if (i == 5) {
+           break; // exit loop when i is 5
+       }
+       if (i == 3) {
+           continue; // skip the rest of the loop when i is 3
+       }
+       cout << i << endl;
+   }
+   ```
+
+### 5. **Function Call Flow**
+   - When a function is called, the control is transferred to that function. Once the function completes execution, control is returned to the point where it was called.
+   ```cpp
+   void greet() {
+       cout << "Hello, World!";
+   }
+
+   int main() {
+       greet(); // Function call
+       return 0;
+   }
+   ```
+
+By understanding these control flow mechanisms, you can effectively manage how and when certain parts of your code are executed in a C++ program.
